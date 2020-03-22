@@ -3,7 +3,9 @@ const mysql = require('mysql');
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: ''
+    password: '',
+    port: 3000,
+    insecureAuth : true
 });
 
 connection.query("create database if not exists billDB", function (err, results) {
